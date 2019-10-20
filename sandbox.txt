@@ -1,0 +1,14 @@
+// Returns an arraylist and accepts two string arrays.
+ArrayList<String> merge(String[] words, String[] more) {
+  // Dynamically allocating memory for an arraylist and naming it sentence.
+  ArrayList<String> sentence = new ArrayList<String>();
+
+  // w is a character? Same as string in this case?
+  for (String w : words) sentence.add(w);
+
+  for (String w : more) sentence.add(w);
+
+  return sentence;
+  // So yeah just taking in two string arrays and combining them together.
+  // The point was that you should be able to dynamically resize an array using something like this.
+}
