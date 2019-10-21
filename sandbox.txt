@@ -12,3 +12,4 @@ ArrayList<String> merge(String[] words, String[] more) {
   // So yeah just taking in two string arrays and combining them together.
   // The point was that you should be able to dynamically resize an array using something like this.
 }
+

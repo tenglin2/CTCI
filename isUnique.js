@@ -22,3 +22,28 @@ const isUnique = function(input) {
 	// I don't think it is even necessary to use integers as the properties for the object since we only need a flag to trigger 1 time.
 	return true;
 };
+
+console.log(isUnique('doog'));
+
+// Book
+// If assume that the string is ASCII then there are only a possible of 128 possible characters. That means if the string length is greater than 128, then there must be a duplicate somewhere and we can immediately return false.
+// Created a boolean array of 128 characters and loops through the string. Uses a charAt method with the index on the string to specify character.
+
+const isUniqueChars = function(str) {
+	if (str.length > 128) return false;
+
+	// Dynamically allocate 128 blocks of memory for each character.
+	const charSet = new Array(128);
+
+	for (let i = 0; i < str.length; i++) {
+		let val = str.charAt(i);
+
+		// This will be undefined in the array if not already accessed.
+		if (charSet[val]) return false;
+		charSet[val] = true;
+	}
+
+	return true;
+};
+
+console.log(isUniqueChars('doog'));
